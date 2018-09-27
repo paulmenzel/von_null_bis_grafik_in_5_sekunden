@@ -109,11 +109,12 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 1.  Systems get faster, but still take some time
 1.  Differentiate between firmware and OS
-1.  Suspend to RAM is bad, and just a workaround
+1.  Suspend to RAM is bad, and just a workaround (and adds unneded complexity)
 1.  If you want to keep the state, use suspend to disk.
 1.  How many power plants could be shut down?
 1.  Customers should request fast boot times.
 1.  Chromebooks and -boxes have boot time requirements.
+1.  Even on servers, so you can just reboot with a downtime less than the TCP time-out.
 
 ## Past efforts
 
@@ -134,13 +135,48 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  Option ROM and AGESA integration slow
 1.  Siemens MB TCU3: Total Time: 377,319 (`siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`)
 
-### Operating system
+## Operating system
 
 1.  Linux kernel
-2.  No initramfs
+2.  Initrd/initramfs
+3.  User space
 
-## Methods
+## Linux kernel
 
-1.  initcall_debug
-2.  systemd-bootchart
-3.  `bootgraph.py` with ftrace
+1.  Built it yourself
+1.  Use `initcall_debug`
+1.  kprobes
+1.  systemd-bootchart
+1.  `bootgraph.py` (with ftrace)
+1.  Doesn’t seem much focus
+
+## Initramfs
+
+1.  Use LZ4 with SSD
+
+         [    0.484102] calling  populate_rootfs+0x0/0x10f @ 1
+         [    0.484127] Unpacking initramfs...
+         [    0.538943] Freeing initrd memory: 29020K
+         [    0.538955] initcall populate_rootfs+0x0/0x10f returned 0 after 53563 usecs
+
+1.  Get rid of initramfs (most systems static)
+
+## User space
+
+1.  systemd-analyze
+1.  systemd-bootchart
+1.  perf
+1.  Deactivate services
+1.  Reorder services depending on system
+1.  systemd-journal flush takes long
+1.  udev rules
+
+## ACPI S3
+
+1.  `sleepgraph.py`
+
+## What is needed?
+
+1.  Interfaces to avoid reinitializing devices
+1.  Pressure on device manufactures to care about boot time (NVMe, …)
+1.  Different target types for desktops, servers, …
