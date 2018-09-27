@@ -14,9 +14,9 @@
 
 ## Presentation
 
-Used Markdown and Pandoc, sources available on GitHub.
+Used Markdown and Pandoc, sources available online.
 
-TinyURL: <https://tinyurl.com/asglinuxboot>
+TinyURL: <https://tinyurl.com/linuxbootfast>
 
 <https://github.com/paulmenzel/linuxboot-and-booting-fast>
 
