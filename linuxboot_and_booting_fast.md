@@ -1,6 +1,6 @@
 % LinuxBoot and booting fast
 % Paul Menzel (Max Planck Institute for Molecular Genetics)
-% 28. September 2018
+% September 28th, 2018
 
 ## Who am I?
 
