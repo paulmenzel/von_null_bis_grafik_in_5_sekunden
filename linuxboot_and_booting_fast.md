@@ -20,29 +20,65 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 <https://github.com/paulmenzel/linuxboot-and-booting-fast>
 
-# Motivation
+# Introduction
 
-## Famous words.
+## Why this talk?
 
-> We do not trust or like firmware.
-
-1.  Slow
-1.  Buggy
-1.  Pain to update
-1.  Often proprietary
-1.  Different code base
+1.  Warning: Focus on x86
+1.  Goal of fast boot
+1.  Bad experiences with proprietary firmware
+1.  Interesting topics
+1.  Cool community
 
 # LinuxBoot
 
 ## Motivation
 
-1.  Gegründet von Ron Minnich als LinuxBIOS am [LANL](https://www.lanl.gov/)
-1.  Konfiguration mit Tastatur und Aktualisierung der Firmware von über 1.000 Clusterknoten mit DOS-Programmen inakzeptabel
+> We do not trust and do not like firmware.
+
+1.  Everywhere
+1.  High privileges, and is essentially an OS
+1.  Slow
+1.  Buggy
+1.  Pain to update
+1.  Often proprietary
+1.  Different and unfamiliar code base
+1.  Quite limited in functionality
+1.  Necessary to write to flash ROM chip for update
+
+# Solution: LinuxBoot – Let Linux do it
+
+## Advantages of Linux kernel
+
+1.  Familiar code base
+1.  Well tested
+1.  Great hardware support
+1.  Kexec as boot loader
+1.  Familiar user space in initrd
+1.  Fix issue by reboot without flashing something
+
+## Implementation
+
+1.  Make firmware as small as possible
+1.  Move as much as possible into the Linux kernel
+1.  Use a small Linux kernel as *boot kernel*
+1.  Use Linux as bootloader with kexec
+
+## History of LinuxBIOS
+
+1.  Started by Ron Minnich as LinuxBIOS at [LANL](https://www.lanl.gov/)
 1.  [„Press F1 to continue.“](http://www.h-online.com/open/features/The-Open-Source-BIOS-is-Ten-An-interview-with-the-coreboot-developers-746525.html)
 1.  [The Linux BIOS](https://www.coreboot.org/images/1/14/Linuxbios.ps)
-1.  [Who is working on coreboot?](https://www.coreboot.org/FAQ#Who_is_working_on_coreboot.3F)
 1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
 1.  [1024-node linuxbios cluster with Dual-P4 systems and Myrinet](https://mail.coreboot.org/pipermail/coreboot/2002-September/000297.html)
+
+## Other talk on LinuxBoot
+
+Chris Koch: [Netboot21: Bootloaders in the 21st Century](https://cfp.all-systems-go.io/en/ASG2018/public/events/215)
+
+> User-space bootloaders with LinuxBoot
+
+Saturday, 4:30 p. m.
 
 # Booting fast
 
