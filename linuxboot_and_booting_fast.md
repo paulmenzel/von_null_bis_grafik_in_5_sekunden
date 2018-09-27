@@ -72,25 +72,67 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
 1.  [1024-node linuxbios cluster with Dual-P4 systems and Myrinet](https://mail.coreboot.org/pipermail/coreboot/2002-September/000297.html)
 
+## Power architecture (ppc64)
+
+1.  Since Power 8 [Petitboot](https://www.kernel.org/pub/linux/kernel/people/geoff/petitboot/petitboot.html)
+
 ## Other talk on LinuxBoot
 
-Chris Koch: [Netboot21: Bootloaders in the 21st Century](https://cfp.all-systems-go.io/en/ASG2018/public/events/215)
-
+> [Netboot21: Bootloaders in the 21st Century](https://cfp.all-systems-go.io/en/ASG2018/public/events/215)
+> 
 > User-space bootloaders with LinuxBoot
 
-Saturday, 4:30 p. m.
+… on Saturday, 4:30 p. m. by Chris Koch
+
+## What is LinuxBoot?
+
+1.  Use Linux as boot-kernel and with initrd as bootloader
+1.  Feasible due to increased sizes of flash ROM chips (thanks to UEFI firmware)
+1.  Use defined interfaces (coreboot romstage, UEFI PEI, U-Boot SPL)
+
+## Initrd
+
+1.  Heads
+1.  u-root
+1.  Petitboot (Buildroot)
+1.  Everything that fits
+    1.  OpenEmbedded/Yocto
+
+## Demo time
+
+1.  ASRock E350M1
+1.  QEMU
 
 # Booting fast
 
 ## Motivation
 
-- S4 good, but S3, really?
+1.  Systems get faster, but still take some time
+1.  Differentiate between firmware and OS
+1.  Suspend to RAM is bad, and just a workaround
+1.  If you want to keep the state, use suspend to disk.
+1.  How many power plants could be shut down?
+1.  Customers should request fast boot times.
+1.  Chromebooks and -boxes have boot time requirements.
 
 ## Past efforts
 
+1.  [LPC: Booting Linux in five seconds](https://lwn.net/Articles/299483/)
+1.  Ten years ago: September 2008
+1.  Eee PC
+
 ## Platform
 
-### firmware
+1.  Sever year old ASRock E350M1
+1.  AMD Fusion
+1.  Kingston SSD
+
+## Firmware
+
+1.  Use coreboot
+1.  1 second with loading GRUB payload
+1.  Option ROM and AGESA integration slow
+1.  Siemens MB TCU3: Total Time: 377,319 (`siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`)
 
 ### Operating system
 
