@@ -127,9 +127,9 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  Ten years ago: September 2008
 1.  Eee PC
 
-## Platform
+## Demo platform
 
-1.  Sever year old ASRock E350M1
+1.  Seven year old ASRock E350M1
 1.  AMD Fusion
 1.  Kingston SSD
 
