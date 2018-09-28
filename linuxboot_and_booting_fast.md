@@ -186,6 +186,19 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 1.  `sleepgraph.py`
 
+# What to do?
+
+## Users
+
+1.  Support vendors caring about these things.
+1.  Use Power
+    1.  OpenPower Foundation
+    1.  Workstations available: https://www.raptorcs.com/TALOSII/
+1.  Resellers for older devices
+1.  Purism devices
+1.  Reseller for used Facebook Open Compute Project systems: http://www.horizon-computing.com/
+1.  Google Chromebooks and -boxes (Intel and ARM)
+
 ## What is needed to improve the situation?
 
 1.  Interfaces to avoid reinitializing devices
