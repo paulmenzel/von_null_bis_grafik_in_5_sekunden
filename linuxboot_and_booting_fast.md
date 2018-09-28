@@ -90,7 +90,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  Feasible due to increased sizes of flash ROM chips (thanks to UEFI firmware)
 1.  Use defined interfaces (coreboot romstage, UEFI PEI, U-Boot SPL)
 
-## Initrd
+## Initrd/initramfs
 
 1.  Heads
 1.  u-root
