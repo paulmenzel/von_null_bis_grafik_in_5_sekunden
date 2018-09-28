@@ -52,7 +52,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 1.  Familiar code base
 1.  Well tested
-1.  Great hardware support
+1.  Great hardware support (Braille, WiFi devices, …)
 1.  Kexec as boot loader
 1.  Familiar user space in initrd
 1.  Fix issue by reboot without flashing something
