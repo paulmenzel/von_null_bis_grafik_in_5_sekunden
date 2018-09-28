@@ -186,8 +186,10 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 1.  `sleepgraph.py`
 
-## What is needed?
+## What is needed to improve the situation?
 
 1.  Interfaces to avoid reinitializing devices
 1.  Pressure on device manufactures to care about boot time (NVMe, …)
 1.  Different target types for desktops, servers, …
+1.  Focus on fast startup times
+    1.  Integrate profiling tools in systemd
