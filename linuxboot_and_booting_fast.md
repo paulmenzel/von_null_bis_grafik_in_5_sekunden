@@ -148,7 +148,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 ## Linux kernel
 
-1.  Built it yourself
+1.  Build it yourself
 1.  Use `initcall_debug`
 1.  kprobes
 1.  systemd-bootchart
