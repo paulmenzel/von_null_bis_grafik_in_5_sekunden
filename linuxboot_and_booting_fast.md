@@ -101,7 +101,9 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 ## Demo time
 
 1.  ASRock E350M1
-1.  QEMU
+1.  AMD Fusion (APU, integrated graphics device)
+1.  socketed 4 MB flash ROM chip by default
+1.  4 GB RAM
 
 # Booting fast
 
