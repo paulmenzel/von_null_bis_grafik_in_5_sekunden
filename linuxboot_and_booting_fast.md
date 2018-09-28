@@ -164,6 +164,10 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
          [    0.538943] Freeing initrd memory: 29020K
          [    0.538955] initcall populate_rootfs+0x0/0x10f returned 0 after 53563 usecs
 
+1.  Make it smaller by only using necessary modules
+
+    `MODULES=dep` in `/etc/initramfs-tools/initramfs.conf`
+
 1.  Get rid of initramfs (most systems static)
 
 ## User space
