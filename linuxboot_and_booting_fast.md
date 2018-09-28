@@ -198,6 +198,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  Purism devices
 1.  Reseller for used Facebook Open Compute Project systems: http://www.horizon-computing.com/
 1.  Google Chromebooks and -boxes (Intel and ARM)
+1.  Dell: Systems with GNU/Linux preinstalled, has Linux developers, and LVFS support for a long time
 
 ## What is needed to improve the situation?
 
