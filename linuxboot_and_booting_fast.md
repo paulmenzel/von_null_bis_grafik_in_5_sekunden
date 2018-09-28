@@ -174,8 +174,10 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 1.  systemd-analyze
 1.  systemd-bootchart
-1.  perf
+1.  strace – trace system calls and signals
+1.  perf – Performance analysis tools for Linux
 1.  Deactivate services
+    1.  for example ModemManager not needed on desktop systems
 1.  Reorder services depending on system
 1.  systemd-journal flush takes long
 1.  udev rules
