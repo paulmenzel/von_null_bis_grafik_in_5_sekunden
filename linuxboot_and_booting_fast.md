@@ -138,7 +138,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  Use coreboot
 1.  1 second with loading GRUB payload
 1.  Option ROM and AGESA integration slow
-1.  Siemens MB TCU3: Total Time: 377,319 (`siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`)
+1.  Siemens MB TCU3 with coreboot and SeaBIOS payload: Total Time: 377,319 (`siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`)
 
 ## Operating system
 
