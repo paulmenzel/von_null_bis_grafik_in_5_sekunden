@@ -155,7 +155,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  `bootgraph.py` (with ftrace)
 1.  Doesn’t seem much focus
 
-## Initramfs
+## Initrd/Initramfs
 
 1.  Use LZ4 with SSD
 
