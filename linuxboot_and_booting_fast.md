@@ -38,6 +38,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 
 1.  Everywhere
 1.  High privileges, and is essentially an OS
+1.  SMM is bad (System Management Mode)
 1.  Slow
 1.  Buggy
 1.  Pain to update
