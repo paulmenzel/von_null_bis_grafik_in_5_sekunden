@@ -1,8 +1,8 @@
-% LinuxBoot and booting fast
-% Paul Menzel (Max Planck Institute for Molecular Genetics)
-% September 28th, 2018
+% Von Null bis Grafik in 5 Sekunden
+% Paul Menzel
+% 17. März 2019
 
-## Who am I?
+## Wer bin ich?
 
 ![Logo of Max Planck Institute for Molecular Genetics](images/MPIMG_helix_rgb.png){ height=25% }\
 
@@ -136,7 +136,7 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 ## Firmware
 
 1.  Use coreboot
-1.  1 second with loading GRUB payload
+1.  1 second with loading GRUB payload (minimized `default_payload.elf`)
 1.  Option ROM and AGESA integration slow
 1.  Siemens MB TCU3 with coreboot and SeaBIOS payload: Total Time: 377,319 (`siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`)
 
