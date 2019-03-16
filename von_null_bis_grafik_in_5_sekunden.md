@@ -75,12 +75,13 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  gut sechs Sekunden
 1.  Firmware: coreboot mit GRUB-Payload: 1,5 Sekunden
 1.  selbstgebautes Linux von master-Zweig ohne initrd: 1,1 Sekunden
-1.  Debian mit systemd 241 und Wayland: 3 bis 4 Sekunden
+1.  Debian mit systemd 241 und Weston 5.0.0 (Wayland): 3 bis 4 Sekunden
 
 # Komponenten
 
 ## Firmware
 
+1.  Standardmäßig: BIOS/UEFI
 1.  Use coreboot
 1.  1 second with loading GRUB payload (minimized `default_payload.elf`)
 1.  Option ROM and AGESA integration slow
@@ -100,6 +101,24 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  systemd-bootchart
 1.  `bootgraph.py` (with ftrace)
 1.  Doesn’t seem much focus
+
+## initcall\_debug
+
+Aus `init/main.c`:
+
+    static __init_or_module void
+    trace_initcall_finish_cb(void *data, initcall_t fn, int ret)
+    {
+            ktime_t *calltime = (ktime_t *)data;
+            ktime_t delta, rettime;
+            unsigned long long duration;
+
+            rettime = ktime_get();
+            delta = ktime_sub(rettime, *calltime);
+            duration = (unsigned long long) ktime_to_ns(delta) >> 10;
+            printk(KERN_DEBUG "initcall %pF returned %d after %lld usecs\n",
+                     fn, ret, duration);
+    }
 
 ## Initrd/Initramfs
 
