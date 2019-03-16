@@ -34,37 +34,50 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
 1.  [1024-node linuxbios cluster with Dual-P4 systems and Myrinet](https://mail.coreboot.org/pipermail/coreboot/2002-September/000297.html)
 
-## Demo
-
-1.  ASRock E350M1
-1.  AMD Fusion (APU, integriertes Grafikgerät)
-1.  ausgeliefert mit steckbarer 4-MB-Flash-ROM-Chip (Löschen von Block bis 400 ms)
-1.  4 GB RAM
-
 # Schneller Start
 
 ## Motivation
 
-1.  Systems get faster, but still take some time
-1.  Differentiate between firmware and OS
-1.  Suspend to RAM is bad, and just a workaround (and adds unneded complexity)
-1.  If you want to keep the state, use suspend to disk.
-1.  How many power plants could be shut down?
-1.  Customers should request fast boot times.
-1.  Chromebooks and -boxes have boot time requirements.
-1.  Even on servers, so you can just reboot with a downtime less than the TCP time-out.
+1.  Trotz immer leistungsfähigeren Geräten dauert der Start immer noch lange.
+1.  Unterschied durch SSD
+1.  Wenige Hersteller fokussieren sich darauf. Google Chromebooks positive Ausnahme mit Bedingungen in weniger als 10 Sekunden zu starten.
+1.  Unklar, warum von Kunden akzeptiert. (auch bei anderen Komponenten: Fernseher, Telefone)
 
-## Past efforts
+## Einschub Ruhemodus (ACPI S3, neue Idle-Zustände S0iX)
+
+1.  Bereitschaft (ACPI S3, Suspend to RAM) schlechte Lösung zum Lösung des Problems des langsamen Starts
+1.  Wie viel Ressourcen in Entwicklung, Fehlerbehebung (Firmware)
+1.  Suspend to Disk Lösung zum Speichern des Zustandes
+1.  Wie viel Kraftwerke könnten weltweit gespart werden?
+
+## Motivation
+
+1.  Auch auf Servern könnten mit schnellen Startzeiten Wartung vereinfachen, wenn Neustart schneller ist als Standard-TCP-Zeitüberschreitung.
+
+## Ähnliche Vorhaben in Vergangenheit
 
 1.  [LPC: Booting Linux in five seconds](https://lwn.net/Articles/299483/)
-1.  Ten years ago: September 2008
+1.  Von vor 10 Jahren: September 2008
 1.  Eee PC
 
-## Demo platform
+# Demo
 
-1.  Seven year old ASRock E350M1
-1.  AMD Fusion
+## Demo
+
+1.  sieben Jahre altes ASRock E350M1
+1.  AMD Fusion (APU, integriertes Grafikgerät)
+1.  ausgeliefert mit steckbarer 4-MB-Flash-ROM-Chip (Löschen von Block bis 400 ms)
+1.  4 GB RAM
 1.  Kingston SSD
+
+## Demo: Ergebnis
+
+1.  gut sechs Sekunden
+1.  Firmware: coreboot mit GRUB-Payload: 1,5 Sekunden
+1.  selbstgebautes Linux von master-Zweig ohne initrd: 1,1 Sekunden
+1.  Debian mit systemd 241 und Wayland: 3 bis 4 Sekunden
+
+# Komponenten
 
 ## Firmware
 
