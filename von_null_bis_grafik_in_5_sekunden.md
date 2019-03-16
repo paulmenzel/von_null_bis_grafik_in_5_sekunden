@@ -43,7 +43,7 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  Wenige Hersteller fokussieren sich darauf. Google Chromebooks positive Ausnahme mit Bedingungen in weniger als 10 Sekunden zu starten.
 1.  Unklar, warum von Kunden akzeptiert. (auch bei anderen Komponenten: Fernseher, Telefone)
 
-## Einschub Ruhemodus (ACPI S3, neue Idle-Zustände S0iX)
+## Einschub Ruhemodus (ACPI S3, neue Idle-Zustände S0ix)
 
 1.  Bereitschaft (ACPI S3, Suspend to RAM) schlechte Lösung zum Lösung des Problems des langsamen Starts
 1.  Wie viel Ressourcen in Entwicklung, Fehlerbehebung (Firmware)
