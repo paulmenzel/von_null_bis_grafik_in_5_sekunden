@@ -28,7 +28,7 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 
 ## Geschichte von coreboot/LinuxBIOS
 
-1.  Started by Ron Minnich as LinuxBIOS at [LANL](https://www.lanl.gov/)
+1.  Gegründet von Ron Minnich als LinuxBIOS beim [LANL](https://www.lanl.gov/)
 1.  [„Press F1 to continue.“](http://www.h-online.com/open/features/The-Open-Source-BIOS-is-Ten-An-interview-with-the-coreboot-developers-746525.html)
 1.  [The Linux BIOS](https://www.coreboot.org/images/1/14/Linuxbios.ps)
 1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
