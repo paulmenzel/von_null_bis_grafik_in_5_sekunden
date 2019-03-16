@@ -81,11 +81,25 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 
 ## Firmware
 
-1.  Standardmäßig: BIOS/UEFI
-1.  Use coreboot
-1.  1 second with loading GRUB payload (minimized `default_payload.elf`)
+1.  Standardmäßig BIOS/UEFI und alleine über 5 s – meist 8 bis 10 s
+1.  Lösung: coreboot-basierende Firmware
+1.  1 Sekunde mit GRUB-Payload (minimiertes `default_payload.elf`)
+
+    1.  `make default_payloat.elf FS_PAYLOAD_MODULES="" EXTRA_PAYLOAD_MODULES="boottime"`
+    1.  Komprimiert 177 KB in CBFS
+
 1.  Option ROM and AGESA integration slow
-1.  Siemens MB TCU3 with coreboot and SeaBIOS payload: Total Time: 377,319 (`siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`)
+1.  Siemens MB TCU3 with coreboot and SeaBIOS payload
+
+        Total Time: 377,319
+
+    aus *Board Status* `siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`
+
+## Firmware: LinuxBoot
+
+1.  Linux as Payload: 416 KB mit `make tinyconfig`
+1.  größer als GRUB-Payload und keine Shell
+1.  Trotzdem Vorteile
 
 ## Operating system
 
@@ -95,12 +109,12 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 
 ## Linux kernel
 
-1.  Build it yourself
-1.  Use `initcall_debug`
-1.  kprobes
-1.  systemd-bootchart
+1.  Selbstbauen mit minimaler Konfiguration
+1.  `initcall_debug` zeigt, wie lange Modul-Init-Routinen brauchen
+1.  Kprobes
+1.  systemd-bootchart bereitet Daten auf
 1.  `bootgraph.py` (with ftrace)
-1.  Doesn’t seem much focus
+1.  Schnelles Starten kein Schwerpunkt bei Entwicklerinnen und Entwicklern
 
 ## initcall\_debug
 
@@ -122,18 +136,18 @@ Aus `init/main.c`:
 
 ## Initrd/Initramfs
 
-1.  Use LZ4 with SSD
+1.  Nutze LZ4 zum Komprimieren bei SSD
 
          [    0.484102] calling  populate_rootfs+0x0/0x10f @ 1
          [    0.484127] Unpacking initramfs...
          [    0.538943] Freeing initrd memory: 29020K
          [    0.538955] initcall populate_rootfs+0x0/0x10f returned 0 after 53563 usecs
 
-1.  Make it smaller by only using necessary modules
+1.  Verkleinern durch Einfügen von nur benötigten Modulen (statisches System)
 
     `MODULES=dep` in `/etc/initramfs-tools/initramfs.conf`
 
-1.  Get rid of initramfs (most systems static)
+1.  Kein initramfs (schlecht bei Verschlüsselung)
 
 ## User space
 
