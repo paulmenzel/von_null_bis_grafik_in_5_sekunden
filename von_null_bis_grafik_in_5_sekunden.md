@@ -4,68 +4,29 @@
 
 ## Wer bin ich?
 
-![Logo of Max Planck Institute for Molecular Genetics](images/MPIMG_helix_rgb.png){ height=25% }\
+- Systemarchitekt beim [Max-Planck-Institut für molekulare Genetik](https://www.molgen.mpg.de/)
+- Diplom-Wirtschaftsmathematiker ([TU Berlin](https://www.tu-berlin.de/))
+- FLOSS-Befürworter
+- Seit 2005 im Projekt [coreboot](https://www.coreboot.org/) aktiv (damals LinuxBIOS)
 
+## Präsentation/Folien
 
-- (Economic) Mathematician by studies at [TU Berlin](https://www.tu-berlin.de/)
-- Free Software enthusiast
-- Active in [coreboot](https://www.coreboot.org/) since 2005 (still LinuxBIOS back then)
-- System architect at [Max Planck Institute for Molecular Genetics](https://www.molgen.mpg.de/)
+Mit Markdown und Pandoc erstellt, Quellen verfügbar.
 
-## Presentation
+TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 
-Used Markdown and Pandoc, sources available online.
+<https://github.com/paulmenzel/von_null_bis_grafik_in_5_sekunden>
 
-TinyURL: <https://tinyurl.com/linuxbootfast>
+# Einführung
 
-<https://github.com/paulmenzel/linuxboot-and-booting-fast>
+## Warum?
 
-# Introduction
+1.  Warnung: Fokus auf x86
+1.  Ziel: Schnell starten
+1.  Interessantes und spannendes Thema ohne Ende
+1.  Tolle Gemeinschaft aus unterschiedlichen Bereichen
 
-## Why this talk?
-
-1.  Warning: Focus on x86
-1.  Goal of fast boot
-1.  Bad experiences with proprietary firmware
-1.  Interesting topics
-1.  Cool community
-
-# LinuxBoot
-
-## Motivation
-
-> We do not trust and do not like firmware.
-
-1.  Everywhere
-1.  High privileges, and is essentially an OS
-1.  SMM is bad (System Management Mode)
-1.  Slow
-1.  Buggy
-1.  Pain to update
-1.  Often proprietary
-1.  Different and unfamiliar code base
-1.  Quite limited in functionality
-1.  Necessary to write to flash ROM chip for update
-
-# Solution: LinuxBoot – Let Linux do it
-
-## Advantages of Linux kernel
-
-1.  Familiar code base
-1.  Well tested
-1.  Great hardware support (Braille, WiFi devices, …)
-1.  Kexec as boot loader
-1.  Familiar user space in initrd
-1.  Fix issue by reboot without flashing something
-
-## Implementation
-
-1.  Make firmware as small as possible
-1.  Move as much as possible into the Linux kernel
-1.  Use a small Linux kernel as *boot kernel*
-1.  Use Linux as bootloader with kexec
-
-## History of LinuxBIOS
+## Geschichte von coreboot/LinuxBIOS
 
 1.  Started by Ron Minnich as LinuxBIOS at [LANL](https://www.lanl.gov/)
 1.  [„Press F1 to continue.“](http://www.h-online.com/open/features/The-Open-Source-BIOS-is-Ten-An-interview-with-the-coreboot-developers-746525.html)
@@ -73,42 +34,14 @@ TinyURL: <https://tinyurl.com/linuxbootfast>
 1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
 1.  [1024-node linuxbios cluster with Dual-P4 systems and Myrinet](https://mail.coreboot.org/pipermail/coreboot/2002-September/000297.html)
 
-# The present
-
-## Power architecture (ppc64)
-
-1.  Since Power 8 [Petitboot](https://www.kernel.org/pub/linux/kernel/people/geoff/petitboot/petitboot.html)
-
-## Other talk on LinuxBoot
-
-> [Netboot21: Bootloaders in the 21st Century](https://cfp.all-systems-go.io/en/ASG2018/public/events/215)
-> 
-> User-space bootloaders with LinuxBoot
-
-… on Saturday, 4:30 p. m. by Chris Koch
-
-## What is LinuxBoot?
-
-1.  Use Linux as boot-kernel and with initrd as bootloader
-1.  Feasible due to increased sizes of flash ROM chips (thanks to UEFI firmware)
-1.  Use defined interfaces (coreboot romstage, UEFI PEI, U-Boot SPL)
-
-## Initrd/initramfs
-
-1.  Heads
-1.  u-root
-1.  Petitboot (Buildroot)
-1.  Everything that fits
-    1.  OpenEmbedded/Yocto
-
-## Demo time
+## Demo
 
 1.  ASRock E350M1
-1.  AMD Fusion (APU, integrated graphics device)
-1.  socketed 4 MB flash ROM chip by default
+1.  AMD Fusion (APU, integriertes Grafikgerät)
+1.  ausgeliefert mit steckbarer 4-MB-Flash-ROM-Chip (Löschen von Block bis 400 ms)
 1.  4 GB RAM
 
-# Booting fast
+# Schneller Start
 
 ## Motivation
 
