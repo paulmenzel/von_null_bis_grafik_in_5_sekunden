@@ -77,7 +77,13 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  selbstgebautes Linux von master-Zweig ohne initrd: 1,1 Sekunden
 1.  Debian mit systemd 241 und Weston 5.0.0 (Wayland): 3 bis 4 Sekunden
 
-# Komponenten
+## Komponenten
+
+1.  Firmware
+1.  Betriebssystem
+    1.  Linux-Kernel
+    1.  Initrd/Initramfs
+    1.  Userspace
 
 ## Firmware
 
