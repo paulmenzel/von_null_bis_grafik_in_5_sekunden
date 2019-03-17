@@ -27,14 +27,6 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  Interessantes und spannendes Thema ohne Ende
 1.  Tolle Gemeinschaft aus unterschiedlichen Bereichen
 
-## Geschichte von coreboot/LinuxBIOS
-
-1.  Gegründet von Ron Minnich als LinuxBIOS beim [LANL](https://www.lanl.gov/)
-1.  [„Press F1 to continue.“](http://www.h-online.com/open/features/The-Open-Source-BIOS-is-Ten-An-interview-with-the-coreboot-developers-746525.html)
-1.  [The Linux BIOS](https://www.coreboot.org/images/1/14/Linuxbios.ps)
-1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
-1.  [1024-node linuxbios cluster with Dual-P4 systems and Myrinet](https://mail.coreboot.org/pipermail/coreboot/2002-September/000297.html)
-
 # Schneller Start
 
 ## Motivation
@@ -101,6 +93,14 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
         Total Time: 377,319
 
     aus *Board Status* `siemens/mc_tcu3/4.4-108-g0d4e124/2016-05-09T06_14_45Z`
+
+## Geschichte von coreboot/LinuxBIOS
+
+1.  Gegründet von Ron Minnich als LinuxBIOS beim [LANL](https://www.lanl.gov/)
+1.  [„Press F1 to continue.“](http://www.h-online.com/open/features/The-Open-Source-BIOS-is-Ten-An-interview-with-the-coreboot-developers-746525.html)
+1.  [The Linux BIOS](https://www.coreboot.org/images/1/14/Linuxbios.ps)
+1.  [https://www.coreboot.org/Clusters](SC 2000: The first LinuxBIOS cluster, built at SC 2000, now at LANL)
+1.  [1024-node linuxbios cluster with Dual-P4 systems and Myrinet](https://mail.coreboot.org/pipermail/coreboot/2002-September/000297.html)
 
 ## Firmware: LinuxBoot
 
