@@ -108,13 +108,13 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  größer als GRUB-Payload und keine Shell
 1.  Trotzdem Vorteile
 
-## Operating system
+## Betriebssystem
 
-1.  Linux kernel
+1.  Linux Kernel
 2.  Initrd/initramfs
-3.  User space
+3.  Userspace
 
-## Linux kernel
+## Linux Kernel
 
 1.  Selbstbauen mit minimaler Konfiguration
 1.  `initcall_debug` zeigt, wie lange Modul-Init-Routinen brauchen
@@ -156,40 +156,37 @@ Aus `init/main.c`:
 
 1.  Kein initramfs (schlecht bei Verschlüsselung)
 
-## User space
+## Userspace
 
 1.  systemd-analyze
 1.  systemd-bootchart
 1.  strace – trace system calls and signals
 1.  perf – Performance analysis tools for Linux
-1.  Deactivate services
-    1.  for example ModemManager not needed on desktop systems
-1.  Reorder services depending on system
-1.  systemd-journal flush takes long
-1.  udev rules
+1.  Deaktiviere Dienste
+    1.  zum Beispiel ModemManager wird oft nicht benötigt
+1.  Anordnung der Dienste ändern
+1.  systemd-journal flush brauchte lange
+1.  udev-Regeln in `/usr/lib/rules.d/` durchschauen
 
 ## ACPI S3
 
 1.  `sleepgraph.py`
 
-# What to do?
+# Was kann gemacht werden?
 
-## Users
+## Nutzer
 
-1.  Support vendors caring about these things.
-1.  Use Power
-    1.  OpenPower Foundation
-    1.  Workstations available: https://www.raptorcs.com/TALOSII/
-1.  Resellers for older devices
-1.  Purism devices
-1.  Reseller for used Facebook Open Compute Project systems: http://www.horizon-computing.com/
+1.  Unterstütze Hersteller, die darauf achten
+1.  Reseller für alte Geräte
+1.  Geräte von Purism
+1.  Reseller für gebrauchte Geräte von Facebook (Open Compute Project): http://www.horizon-computing.com/
 1.  Google Chromebooks and -boxes (Intel and ARM)
 1.  Dell: Systems with GNU/Linux preinstalled, has Linux developers, and LVFS support for a long time
 
-## What is needed to improve the situation?
+## Wie kann die Situation verbessert werden?
 
-1.  Interfaces to avoid reinitializing devices
-1.  Pressure on device manufactures to care about boot time (NVMe, …)
-1.  Different target types for desktops, servers, …
-1.  Focus on fast startup times
-    1.  Integrate profiling tools in systemd
+1.  Schnittstellen, um mehrfache Initialisierung zu verhindern
+1.  Druck auf Hersteller ausüben, um Startzeit zu verringern (NVMe, …)
+1.  Spezielle Konfiguration für Arbeitsplatzsysteme, Server, …
+1.  Fokus auf schnelle Startzeiten
+    1.  Integration von Profiling-/Tracing-Werkzeugen in systemd
