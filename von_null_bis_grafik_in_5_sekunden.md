@@ -84,7 +84,7 @@ TinyURL: <https://tinyurl.com/vonnullbisgrafikinfuenfsekunden>
 1.  Lösung: coreboot-basierende Firmware
 1.  1 Sekunde mit GRUB-Payload (minimiertes `default_payload.elf`)
 
-    1.  `make default_payloat.elf FS_PAYLOAD_MODULES="" EXTRA_PAYLOAD_MODULES="boottime"`
+    1.  `make default_payload.elf FS_PAYLOAD_MODULES="" EXTRA_PAYLOAD_MODULES="boottime"`
     1.  Komprimiert 177 KB in CBFS
 
 1.  Option ROM and AGESA integration slow
