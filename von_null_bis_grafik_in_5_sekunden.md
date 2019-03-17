@@ -8,6 +8,7 @@
 - Diplom-Wirtschaftsmathematiker ([TU Berlin](https://www.tu-berlin.de/))
 - FLOSS-Befürworter
 - Seit 2005 im Projekt [coreboot](https://www.coreboot.org/) aktiv (damals LinuxBIOS)
+- 2 Artikel im Linux Magazin
 
 ## Präsentation/Folien
 
